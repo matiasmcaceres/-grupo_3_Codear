@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- HEAD -->
+  <%- include("partials/head.ejs") %>
+  <!-- HEAD -->
+
+  <body>
+    <!-- Header -->
+    <%- include("partials/header.ejs") %>
+    <!-- /Header -->
+
+		<h1><%= title %> </h1>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <% products.forEach(product=>{ %>
+       <section class="product-box">
+					<a href="/cursos/detail/<%= product.id %> ">
+						<img src="/images/cursos/<%= product.fotoCurso %>" class="card-img-top" alt="...">
+						<div class="card-body ">
+							<div>
+								<h5 class="card-title "></h5>
+								<p class="card-profe"><%= product.nombreCurso %> </p>
+								<!-- <p class="card-text"><%= product.descripcionCorta %> </p> -->
+							</div>
+							<div class="precio-curso ">
+								<!-- <div class="rebaja">
+									<h1>REBAJA</h1>
+									<p>65% Dto. $1.990ARS</p>
+								</div> -->
+								<a href="#" class="btn btn-primary col-12 card-precio"><i class="fas fa-shopping-cart"></i>$<%= product.precio %> </a>
+							</div>
+						</div>
+					</a>
+				</section>
+      <% }) %>
+			</div>
+
+    
+    <!-- FOOTER -->
+    <%- include("partials/footer.ejs") %>
+    <!-- FOOTER -->
+  </body>
+</html>

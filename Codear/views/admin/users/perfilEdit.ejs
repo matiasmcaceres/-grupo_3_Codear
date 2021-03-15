@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include("../partials/head.ejs") %>
+<!-- HEAD -->
+
+<body>
+  <!-- HEADER -->
+  <%- include("../partials/header.ejs") %>
+  <!-- HEADER -->
+  <div class="perfil container-fluid row">
+    <form action="/admin/curso/update/<%= usuario.id %>?_method=PUT">
+    <div class="bienvenido-user col-12">
+      <img src="/images/avatares/<%= userAdmin.avatar %> " alt="">
+      <input type="file" name="avatar">
+      <h1>Edita tus Datos, <%= userAdmin.nombreUsuario %> </h1>
+      <p>Administra tu información y las opciones de privacidad y seguridad a fin de que Codear sea más relevante para
+        ti.</p>
+    </div>
+    <div class="datos-user">
+      <h2>Edición de datos</h2>
+      <h3>Datos de Cuenta</h3>
+      <div class="cajaUser row">
+        <h3 class="col-5">Usuario</h3>
+        <input class="col-5" type="text" name="nombreUsuario" value="<%= userAdmin.nombreUsuario %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">E-mail</h3>
+        <input class="col-5" type="email" name="email" value="<%= userAdmin.email %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Clave</h3>
+        <input class="col-5" type="password" name="pass" value="<%= userAdmin.pass %>"></input>
+      </div>
+      <h3>Datos Personales</h3>
+      <div class="cajaUser row">
+        <h3 class="col-5">Nombre</h3>
+        <input class="col-5" type="text" name="nombrePerfil" value="<%= userAdmin.nombrePerfil %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Apellido</h3>
+        <input class="col-5" type="text" name="apellidoPerfil" value="<%= userAdmin.apellidoPerfil %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Documento</h3>
+        <input class="col-5" type="number" name="documento" value="<%= userAdmin.documento %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Telefono</h3>
+        <input class="col-5" type="number" name="telefonoPerfil" value="<%= userAdmin.telefonoPerfil %>"></input>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Domicilio</h3>
+        <input class="col-5" type="text" name="domicilioPerfil" value="<%= userAdmin.domicilioPerfil %>"></input>
+      </div>
+    </div>
+    <button type="submit">GUARDAR CAMBIOS</button>
+    </form>
+  </div>
+  <!-- FOOTER -->
+  <%- include("../partials/footer")  %>
+  <!-- FOOTER -->
+
+</body>
+
+</html>

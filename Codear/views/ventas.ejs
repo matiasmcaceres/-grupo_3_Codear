@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<%- include("partialsAdd/head.ejs")  %> 
+
+<body>
+<!-- HEADER -->
+<%- include("partialsAdd/header.ejs")  %> 
+<!-- HEADER -->
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container-fluid row">
+    <!-- CONTROLADOR -->
+    <div class="controlador col-2">
+      <div class="mi-cuenta">
+        <h1>Administracion de <span> MI CUENTA</span></h1>
+        <nav class="cuenta">
+          <ul>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Mis Datos</a></li>
+            <li><a href="#">Seguridad</a></li>
+            <li><a href="#">Privacidad</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cursos">
+        <h1>Gestion de tienda<span> CURSOS</span></h1>
+        <nav class="cuenta">
+          <ul>
+            <li><a href="/admin">Todos los cursos</a></li>
+            <li><a href="/admin/add">Añadir nuevo</a></li>
+            <li><a href="/admin/categoria">Categorias</a></li>
+            <li><a href="/admin/ventas">Ventas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- CONTROLADOR -->
+    <!-- CONTENEDOR -->
+    <div class="contenedor col-10 ">
+      <div class="titulo-categorias col-12 row">
+        <h1 class="col-5">VENTAS</h1>
+      </div>
+
+      <div class="ordenar col-12 row">
+        <h3 class="col-2">TODO (13)</h3>
+        <h3 class="boton col-2"> Ordenar</h3>
+        <form class="col-4" action="" method="">
+          <label for="categoria">Categoria :</label>
+          <select name="Categoria" id="">
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Arduino">Arduino</option>
+            <option value="Emprendimiento">Emprendimiento</option>
+            <option value="Ingenieria Software">Ingenieria Software</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Negocios">Negocios</option>
+            <option value="Seguridad Informatica">Seguridad Informatica</option>
+            <option value="Tipografia">Tipografia</option>
+            <option value="Video Juegos">Video Juegos</option>
+            <option value="WordPress">WordPress</option>
+          </select>
+        </form>
+        <div class="buscador col-4">
+          <form action="" method="get" class="search-form ">
+            <input type="text" name="search" placeholder="Buscar cursos" class="search-form_input" />
+            <button type="submit" class="search-form_button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="plantilla-productos col-11">
+        <div class="row">
+          <a class="col-1"><i class="fas fa-archive"></i></a>
+          <h2 class="col-4">Nombre</h2>
+          <h2 class="col-2">Precio</h2>
+          <h2 class="col-2">Categoria</h2>
+          <a class="col-1"><i class="far fa-star"></i></a>
+          <h2 class="col-2">Ventas</h2>
+        </div>
+      </div>
+
+      <div class="boton productos col-11">
+        <a href="">
+          <div class="producto row">
+            <img class="col-1" src="/images/creacionDeUnaTiendaOnlienConWordpress.png" alt="">
+            <h2 class="col-4">Creacion de una tienda online con wordpress</h2>
+            <h2 class="col-2">$1000</h2>
+            <h2 class="col-2">Wordpress</h2>
+            <p class="col-1"><i class="far fa-star"></i></p>
+            <h2 class="col-2">150</h2>
+          </div>
+        </a>
+      </div>
+      <div class="boton productos col-11">
+       <a href="">
+          <div class="producto row">
+            <img class="col-1" src="/images/DiseñodeproductodigitalconLeanyUX.png" alt="">
+            <h2 class="col-4">Diseño de producto digital con Lean y UX</h2>
+            <h2 class="col-2">$1500</h2>
+            <h2 class="col-2">Diseño</h2>
+            <p class="col-1"><i class="far fa-star"></i></p>
+            <h2 class="col-2">170</h2>
+          </div>
+       </a>
+      </div>
+    </div>
+    
+    <!-- CONTENEDOR -->
+  </div>
+  <!-- CONTENEDOR PRINCIPAL -->
+
+
+
+
+
+
+
+
+  <!-- /footer -->
+  <%- include("partialsAdd/footer.ejs")  %> 
+</body>
+
+</html>

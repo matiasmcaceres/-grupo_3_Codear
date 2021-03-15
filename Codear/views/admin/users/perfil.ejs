@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include("../partials/head.ejs") %>
+<!-- HEAD -->
+
+<body>
+  <!-- HEADER -->
+  <%- include("../partials/header.ejs") %>
+  <!-- HEADER -->
+  <div class="perfil container-fluid row">
+    <div class="bienvenido-user col-10">
+      <img src="/images/avatares/<%= userAdmin.avatar %> " alt="">
+      <h1>Bienvenido, <%= userAdmin.nombreUsuario %> </h1>
+      <p>Administra tu información y las opciones de privacidad y seguridad a fin de que Codear sea más relevante para
+        ti.</p>
+    </div>
+    <div class="datos-user">
+      <h2>Mis datos</h2>
+      <h3>Datos de Cuenta</h3>
+      <div class="cajaUser row">
+        <h3 class="col-5">Usuario</h3>
+        <h4 class="col-5"><%= userAdmin.nombreUsuario %> </h4>
+        <p class="col-2"><a href="/users/edit/<%= userAdmin.id %>">Editar</a></p>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">E-mail</h3>
+        <h4 class="col-5"><%= userAdmin.email %> </h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Clave</h3>
+        <h4 class="col-5"><%= userAdmin.pass %></h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+      <h3>Datos Personales</h3>
+      <div class="cajaUser row">
+        <h3 class="col-5">Nombre y Apellido</h3>
+        <h4 class="col-5"><%= userAdmin.nombrePerfil %> <%= userAdmin.apellidoPerfil%></h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Documento</h3>
+        <h4 class="col-5"><%= userAdmin.documento %></h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Telefono</h3>
+        <h4 class="col-5"><%= userAdmin.telefonoPerfil %></h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+      <div class="cajaUser row">
+        <h3 class="col-5">Domicilio</h3>
+        <h4 class="col-5"><%= userAdmin.domicilioPerfil %></h4>
+        <p class="col-2"><a href="#">Editar</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <%- include("../partials/footer")  %>
+  <!-- FOOTER -->
+
+</body>
+
+</html>

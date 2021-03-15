@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "nombreUsuario": "CODEAR",
+    "email": "codear@gmail.com",
+    "pass": "$2b$12$LNuePRXr4LZgOU7ssjQe7ezqNLDbkqtyAI5xp7kV55j3qPK8ILufS",
+    "avatar": "avatar-1614712036603.svg",
+    "admin": true
+  },
+  {
+    "id": 2,
+    "nombreUsuario": "Ivan",
+    "email": "ivnbenitez@gmail.com",
+    "pass": "$2b$12$BEewbKptBYoW01.R.TXw.O00jWhRYiTUgVc9LimQjS/wm3WYOjCxa",
+    "avatar": "avatar-1614731967508.svg",
+    "admin": true
+  },
+  {
+    "id": 3,
+    "nombreUsuario": "Malena Catalayu",
+    "email": "malevale@gmail.com",
+    "pass": "$2b$12$yD.ooMO9cvvDWPKaE2cjKe049/b4rV2XQmfIEO.T3Q1yPFqr./a0u",
+    "avatar": "avatar-1614805525425.svg",
+    "admin": true
+  },
+  {
+    "id": 5,
+    "nombreUsuario": "Maximo",
+    "nombrePerfil": "Máximo",
+    "apellidoPerfil": "De Michieli",
+    "documento": 123123123,
+    "domicilioPerfil": "avenida quete 2300",
+    "telefonoPerfil": 123123123,
+    "email": "maxi@gmail.com",
+    "pass": "$2b$12$HlsfTmlxLVLpVMt5gmAlzurfFqInSE7nfmAPxdDw4z0pW0c4ilrF.",
+    "avatar": "avatar-1614809586174.png",
+    "admin": false
+  }
+]

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Variables */
+:root {
+  --negroCODE: #020202;
+  --celesteCODE: #308999;
+  --gray: #666666;
+  --fondo: #ebebeb;
+  --naranja: #DB4C0B;
+  --whatsapp: #20B038;
+  --fuente-base: 'Ubuntu', sans-serif;
+}
+
+/* Basics */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* PRINCIPAL CARRITO */
+.principal-carrito {
+  padding: 5px;
+  border-bottom: 1px solid #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.principal-carrito h1 {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.principal-carrito i {
+  color: var(--naranja);
+  text-align: right;
+  padding-right: 0;
+
+}
+
+/* COLUMNA */
+.secciones {
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.secciones a {
+  font-size: 14px;
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.secciones a:hover {
+  border-left: 5px solid var(--celesteCODE);
+  font-weight: 900;
+}
+
+.secciones div>h1 {
+  margin-top: 15px;
+}
+
+.columnaActive {
+  border-left: 5px solid var(--celesteCODE);
+}
+
+/* COLUMNA */
+
+/* CUERPO */
+.cuerpo-cursos-carrito {
+  margin: 0;
+  padding: 0;
+}
+
+/* cursos */
+.todos-los-cursos {
+  padding: 0 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.todos-los-cursos>h1 {
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(182, 179, 179);
+}
+
+.todos-los-cursos>div {
+  margin: 20px;
+  padding: 0;
+}
+
+.todos-los-cursos>div:hover {
+  box-shadow: 0 0 10px 0;
+}
+
+/* cadaCurso */
+.curso{
+  height: auto;
+}
+
+ .card-body .card-title,
+ .card-body .card-profe,
+ .card-body .card-text,
+ .card-body .rebaja,p {
+  padding: 2px 5px;
+  margin: 0;
+}
+
+.card-body {
+  margin: 0;
+  padding: 0px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.precio-curso{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card-body h5 {
+  font-size: 18px;
+}
+
+.card-body p,
+.rebaja {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-profe{
+  font-weight: 500;
+}
+
+.card-text{
+  color: var(--gray);
+}
+
+.rebaja{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rebaja h1{
+  background-color: var(--naranja);
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 70px;
+  text-align: center;
+  color: white;
+  margin: 0 5px;
+}
+
+.rebaja p{
+  color: var(--naranja);
+  font-weight: 900;
+}
+
+.card-precio{
+  background-color: var(--celesteCODE);
+  border: none;
+  max-height: 40px;
+  font-size: 20px;
+  width: 100%;
+  margin:0px;
+  padding:5px;
+}
+
+.card-precio i{
+  color: white;
+  margin: 0;
+  padding: 0 5px 0 0;
+}
+
+.card-precio:hover{
+  background-color: var(--naranja);
+  box-shadow: 0 0 10px 0;
+}
+/* cursos */
+/* CUERPO */
+
+@media (max-width:425px){
+  .secciones a{
+    font-size: 20px;
+  }
+  .cuerpo-cursos-carrito>img{
+    display: none;
+  }
+  .secciones{
+    display: none;
+  }
+}
+
+@media (max-width:1024px) {
+  .secciones a {
+    font-size: 16px;
+  }
+  .secciones div a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width:1440px) {
+  .secciones a {
+    font-size: 20px;
+  }
+}

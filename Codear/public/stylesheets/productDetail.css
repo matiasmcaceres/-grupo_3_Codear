@@ -1,0 +1,290 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Variables */
+:root {
+  --negroCODE: #020202;
+  --celesteCODE: #308999;
+  --gray: #666666;
+  --fondo: #ebebeb;
+  --naranja: #DB4C0B;
+  --whatsapp: #20B038;
+  --fuente-base: 'Ubuntu', sans-serif;
+
+}
+
+body {
+  height: 100%;
+}
+
+/* PRODUCT DETAIL */
+.curso-nombre {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #666666;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.curso-nombre p {
+  font-size: 16px;
+  margin: 0 10px;
+  font-weight: 600;
+  color: #666666;
+  display: flex;
+  align-items: center;
+}
+
+.curso-nombre i {
+  color: #308999;
+  font-size: 20px;
+}
+
+/* CUERPO CURSO */
+.cuerpo-curso {
+  width: 90%;
+  margin: auto;
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Curso General */
+.curso-general .titulo-curso h1 {
+  font-size: 35px;
+}
+
+.subtitulo-curso p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* SECCION DETALLE */
+.seccion-detalle {
+  margin: 20px 0 20px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* CURSO */
+.curso-detail {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+}
+
+.curso-detail>ul>li{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.curso-detail ul.nav{
+  margin: 0;
+}
+
+.curso-detail .tap-pane {
+  display: flex;
+  text-align: center;
+}
+
+.curso-detail .nav {
+  border-bottom: 2px solid var(--gray);
+  width: 100%;
+}
+
+.curso-detail .nav-link {
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: var(--negroCODE);
+  background-color: var(--fondo);
+  font-weight: 600;
+}
+
+/* PRESENTACION */
+
+/* contenido del curso */
+.contenidos-curso {
+  padding: 20px;
+  background: var(--fondo);
+  overflow: scroll;
+  height: 450px;
+}
+
+.contenidos-curso>div {
+  margin: 20px;
+}
+
+.contenidos-curso>div>h2 {
+  font-size: 20px;
+}
+
+.contenidos-curso>div>li {
+  font-size: 16px;
+  list-style: circle;
+}
+
+/* profesor del curso */
+.profesor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profesor h2 {
+  color: var(--negroCODE);
+  margin: 15px;
+  font-size: 14px;
+}
+
+ .profesor h2 span {
+   font-weight: 900;
+   font-size: 16px;
+ }
+
+.profesor img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+/* información del curso */
+.curso-detail .info-curso {
+  background: var(--fondo);
+  padding: 20px;
+  overflow: scroll;
+  height: 450px;
+}
+
+
+.curso-detail .info-curso p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* DATOS CURSO */
+.datos-curso {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: var(--gray) 2px solid;
+}
+
+.datos-precio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.datos-curso h2 {
+  font-size: 35px;
+  padding: 0px;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.datos-curso h3 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.datos-curso form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.datos-curso form button {
+  width: 90%;
+  font-size: 30px;
+  padding: 0px 25px;
+  border: none;
+  margin: 10px 0;
+  background: #308999;
+  color: #fff;
+  border-radius: none;
+  text-transform: uppercase;
+}
+
+.datos-curso form button:hover {
+  background-color: var(--celesteCODE);
+  box-shadow: 0 0 10px 0 var(--negroCODE);
+  border-radius: none;
+  border: none;
+}
+
+.datos-curs-info p{
+  font-size: 14px;
+}
+
+.datos-curs-info i {
+  color: var(--negroCODE);
+}
+
+.un-curso-de{
+  display: flex;
+  align-items: center;
+}
+
+.un-curso-de p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.un-curso-de-foto{
+  width: 100px;
+}
+
+.un-curso-de img{
+  border-radius: 100%;
+}
+
+.canjear-regalo {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.tachado {
+  text-decoration: line-through;
+  color: #DB4C0B;
+}
+
+
+@media (max-width:450px){
+  .datos-curso{
+    border: none;
+  }
+  .profesor{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:800px) {
+  .profesor {
+    display: flex;
+    flex-direction: column;
+  }
+}

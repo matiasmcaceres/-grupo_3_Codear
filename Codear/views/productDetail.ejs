@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include("partials/head.ejs") %>
+<!-- HEAD -->
+
+<body>
+  <!-- Header -->
+  <%- include("partials/header.ejs") %>
+  <!-- /Header -->
+
+
+  <div class="container-fluid row contenedor-detalle">
+
+    <div class="curso-nombre col-12">
+        <p><i class="fas fa-chevron-right"></i>Cursos</p>
+        <p><i class="fas fa-chevron-right"></i><%- resultado.nombreCurso %></p>
+    </div>
+
+    <div class="cuerpo-curso row">
+
+      <div class="curso-general col-12">
+        <div class="titulo-curso">
+          <h1><%- resultado.nombreCurso %> </h1>
+        </div>
+        <div class="subtitulo-curso">
+          <p>Un curso de <%- resultado.nombreProfesor %> <%- resultado.apellidoProfesor %> , <%- resultado.tituloProfesor %></p>
+        </div>
+      </div>
+
+      <div class="seccion-detalle col-12 row">
+        <div class="curso-detail col-12 col-md-6 col-lg-8">
+          <ul class="nav nav-pills mb-3 row" id="pills-tab" role="tablist">
+            <li class="nav-item col-6 col-lg-3" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#presentacion"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">Presentación</button>
+            </li>
+            <li class="nav-item col-6 col-lg-3" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#contenido"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Contenidos</button>
+            </li>
+            <li class="nav-item col-6 col-lg-3" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#profesor"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Profesor</button>
+            </li>
+            <li class="nav-item col-6 col-lg-3" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#info"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Informacíon</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="presentacion" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="presentacion-curso">
+                <img src="/images/cursos/<%- resultado.fotoCurso %>" alt="">
+              </div>
+            </div>
+            <div class="tab-pane fade" id="contenido" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="contenidos-curso">
+                <div class="Resumen del curso">
+                  <h2> Resumen del curso</h2>
+                  <li><%= resultado.cantidadDeCapitulos %> Lecciones</li>
+                  <li><%= resultado.cantidadDePracticas %> prácticas</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U1: Introducción</h2>
+                  <li>Presentación</li>
+                  <li>Influencias</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U2: Empezando con JavaScript</h2>
+                  <li>¿Para qué sirve JavaScript?</li>
+                  <li>Configuración del editor</li>
+                  <li>Incorporando JS a nuestra web</li>
+                  <li>Elementos y sintaxis</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U3: Primeras interacciones</h2>
+                  <li>Variables, numerales, literales</li>
+                  <li>Operadores, funciones</li>
+                  <li>Event listeners</li>
+                  <li>Alterar el contenido del DOM</li>
+                  <li>Condicionales y booleanos</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U4: Una baraja de cartas</h2>
+                  <li>Operaciones con arrays</li>
+                  <li>Loops</li>
+                  <li>Eventos en loop</li>
+                  <li>Los objetos en JavaScript. El azar o Math.random()</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U5: Un juego de Memory</h2>
+                  <li>Interacción básica</li>
+                  <li>Comunicación entre funciones</li>
+                  <li>Organización de archivos</li>
+                  <li>Gestionando el feedback</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U6: Sube de nivel</h2>
+                  <li>Cronómetro y contador</li>
+                  <li>Niveles de juego</li>
+                  <li>Efectos de sonido</li>
+                  <li>Completando la interfaz</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>U7: Librerias y recursos</h2>
+                  <li>Librerias de JavaScript</li>
+                  <li>Recursos</li>
+                </div>
+                <div class="cont-curso">
+                  <h2>Proyecto Final</h2>
+                  <li>Introducción a javaScript</li>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="profesor" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div class="profesor">
+                <div>
+                  <h2>
+                    <span>Profesor:</span> <%- resultado.nombreProfesor %> <%- resultado.apellidoProfesor %>
+                  <h2>
+                  <h2>
+                    <span>Correo Electronico:</span> <%= resultado.correoProfesor %> 
+                  </h2>
+                  <h2>
+                    <span>Teléfono:</span> <%= resultado.telefonoProfesor %> 
+                  </h2>
+                  <h2>
+                    <span>Título:</span> <%= resultado.tituloProfesor %> 
+                  </h2>
+                  <h2>
+                    <span>Localidad:</span> <%= resultado.ciudadProfesor %> , <%= resultado.pais %> 
+                  </h2>
+                </div>
+                <img src="/images/cursos/<%= resultado.fotoProfesor %>" alt="">
+              </div>
+            </div>
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="pills-contact-tab">
+              <div class="info-curso">
+                <h2>Descripcion General</h2>
+                <p>
+                  <%- resultado.descripcion %>
+                </p>
+                <h2>¿A quién está dirigido? </h2>
+                <p>
+                 <%= resultado.aQuienEstaDirigido %> 
+                </p>
+                <h2>Requisitos</h2>
+                <p>
+                  <%= resultado.requisitos %> 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="datos-curso col-12 col-md-6 col-lg-4 row">
+        <div class="col-12 row datos-precio">
+          <h2 class="">$<%- resultado.precioRebaja %></h2>
+          <h3 class="">75% Dto. <span class="tachado">$<%- resultado.precio %>ARS</span></h3>
+        </div>
+        <form class="col-12" action="">
+          <button type="submit">Comprar</button>
+        </form>
+        <div class="datos-curs-info col-12">
+          <p> <i class="fas fa-users"></i> 6081 alumnos</p>
+          <p> <i class="fas fa-play"></i> <%= resultado.cantidadDeCapitulos %>  Lecciones </p>
+          <p> <i class="fas fa-globe"></i> Online y a tu ritmo</p>
+          <p> <i class="fas fa-mobile"></i> Disponible desde la app</p>
+          <p> <i class="fas fa-volume-up"></i> Audio: <%= resultado.audio %> </p>
+          <p> <i class="fas fa-chart-line"></i> Nivel: <%= resultado.nivel %> </p>
+          <p> <i class="fas fa-infinity"></i> Acceso ilimitado para siempre</p>
+        </div>
+        <div class="un-curso-de col-12">
+          <div class="un-curso-de-info">
+            <p><%- resultado.nombreProfesor %> <%- resultado.apellidoProfesor %></p>
+            <p><%= resultado.tituloProfesor %></p>
+            <p><%= resultado.ciudadProfesor %> , <%= resultado.pais %> </p>
+          </div>
+          <div class="un-curso-de-foto">
+            <img src="/images/cursos/<%= resultado.fotoProfesor %> " alt="">
+          </div>
+        </div>
+        <form class="col-12" action="">
+          <button style="font-size: 20px;" type="submit">Comprar para regalo</button>
+        </form>
+        <a href="" class="col-12 canjear-regalo">Canjear el curso con código de regalo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <%- include("partials/footer.ejs") %>
+  <!-- FOOTER -->
+</body>
+
+</html>

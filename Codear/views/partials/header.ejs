@@ -1,0 +1,106 @@
+<header>
+    <% if (typeof userAdmin != "undefined" ) { %>
+    <div class="container-fluid row">
+        <nav class="principal col-12 row">
+            <!-- LOGO -->
+            <div class="logo col-5 col-md-3 col-lg-3">
+                <a href="/">
+                    <img src="/images/CODE.svg" />
+                </a>
+            </div>
+
+            <!-- MENU -->
+
+            
+
+                    <div>
+                        <p>Cursos</p>
+                    </div>
+
+                
+
+            <!-- BUSCADOR -->
+            <div class="buscador col-7 col-md-5 col-lg-4 col-xl-4">
+                <form action="/cursos/search" method="get" class="search-form ">
+                    <input type="text" name="search" placeholder="Buscar cursos" class="search-form_input" />
+                    <button type="submit" class="search-form_button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+
+
+
+            <!-- PERFIL -->
+            <ul class="ingresa col-6 col-md-4 col-lg-3 col-xl-3 row">
+                <li class="i-carrito-hover">
+                    <a href="/cursos/carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="col-7">
+                    <div class="perfil-header row">
+                        <h3 class="col-8"><%= userAdmin.nombreUsuario %> </h3>
+                        <img class="col-4" src="/images/avatares/<%= userAdmin.avatar %> " alt="">
+                    </div>
+                    <ul class="submenu">
+                        <li class="cr">
+                            <a href="#">Mis cursos</a>
+                        </li>
+                        <li class="cr">
+                            <a href="/admin">Mi perfil</a>
+                        </li>
+                        <li class="crea">
+                            <a href="/users/logout">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <% }else{ %>
+
+    <div class="container-fluid row">
+        <nav class="principal col-12 row">
+            <!-- LOGO -->
+            <div class="logo col-5 col-md-2 col-lg-3">
+                <a href="/">
+                    <img src="/images/CODE.svg" />
+                </a>
+            </div>
+
+            <div class="cursos-header col-2 col-lg-1">
+                <a href="">Cursos</a>
+            </div>
+
+            <!-- BUSCADOR -->
+            <div class="buscador col-7 col-md-5 col-lg-3 col-xl-4">
+                <form action="/cursos/search" method="get" class="search-form ">
+                    <input type="text" name="search" placeholder="Buscar cursos" class="search-form_input" />
+                    <button type="submit" class="search-form_button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- PERFIL -->
+            <ul class="ingresa col-12 col-md-5 col-lg-4 col-xl-4 row">
+                <li class="i-carrito-hover">
+                    <a href="/cursos/carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="iniciar-sesion">
+                    <a class="cr" href="/users/login">Iniciar sesión</a>
+                </li>
+                <li class="crea">
+                    <a href="/users/register">Registrarse</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+    <% }  %>
+</header>

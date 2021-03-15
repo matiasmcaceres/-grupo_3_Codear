@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head.ejs")  %>
+
+<body>
+  <!-- HEADER -->
+  <%- include("partials/header.ejs")  %>
+  <!-- HEADER -->
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container-fluid row">
+    <!-- CONTROLADOR -->
+    <%- include("partials/controlador") %>
+    <!-- CONTROLADOR -->
+
+
+    <!-- CONTENEDOR -->
+    <div class="contenedor-listaDeProductos container-fluid col-12 col-lg-9 col-md-8">
+      <div class="titulo-listaDeProductos col-12 row">
+        <h1 class="col-12 col-lg-5">VENTAS</h1>
+      </div>
+
+      <div class="ordenar col-12 row">
+        <h3 class="col-5 col-md-3 col-lg-2">TODO (<%= products.length %>)</h3>
+        <div class="buscador col-10 col-lg-3">
+          <form action="" method="get" class="search-form ">
+            <input type="text" name="search" placeholder="Buscar cursos" class="search-form_input" />
+            <button type="submit" class="search-form_button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="plantilla-productos col-12 row">
+        <div class="row col-12">
+          <a class="img-producto col-lg-2"><i class="fas fa-archive img-producto"></i></a>
+          <h2 class="nombre-producto col-4 col-lg-4">Nombre</h2>
+          <h2 class="precio-producto col-4 col-lg-2">Precio</h2>
+          <h2 class="categoria-producto col-lg-2">Alumnos</h2>
+        </div>
+      </div>
+
+      <div class="productos col-12">
+        <% products.forEach(product => { %>
+        <a  href="/admin/curso/edit/<%= product.id %>">
+          <div class="producto row container">
+            <img class="img-producto col-lg-2" src="/images/cursos/<%= product.fotoCurso %> " alt="">
+            <h2 class="nombre-producto col-4 col-lg-4"><%= product.nombreCurso %> </h2>
+            <h2 class="precio-producto col-4 col-lg-2">$<%= product.precio %> </h2>
+            <h2 class="categoria-producto col-lg-2">100</h2>
+            
+            <!-- <h2 class="col-3 col-md-2">
+              <form action="/admin/curso/edit/<%= product.id %>">
+                <button type="submit">EDiTAR</button>
+              </form>
+            </h2> -->
+          </div>
+        </a>
+        <% }) %>
+      </div>
+    </div>
+    <!-- CONTENEDOR -->
+  </div>
+  <!-- CONTENEDOR PRINCIPAL -->
+
+
+
+
+
+
+
+
+  <!-- /footer -->
+  <%- include("partials/footer.ejs")  %>
+</body>
+
+</html>

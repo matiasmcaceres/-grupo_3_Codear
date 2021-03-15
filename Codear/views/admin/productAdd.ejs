@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include("partials/head.ejs") %>
+<!-- HEAD -->
+
+<body>
+  <!-- Header -->
+  <%- include("partials/header.ejs") %>
+  <!-- /Header -->
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container-fluid row">
+
+    <!-- CONTROLADOR -->
+    <%- include("partials/controlador") %>
+    <!-- CONTROLADOR -->
+
+
+
+    <!-- CONTENEDOR -->
+    <div class="contenedor col-12 col-lg-10 col-md-8">
+
+      <form action="/admin/curso/store" class="row formulario-carga col-12" method="POST" enctype="multipart/form-data">
+        <div class="name-curso nombre  col-12 row">
+          <label for="curso">NOMBRE DEL CURSO</label>
+          <input type="text" name="nombreCurso">
+        </div>
+
+        <!-- CAJA DE CURSOS -->
+        <div class="caja-de-cursos col-12 col-md-6">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#foto" role="tab" aria-controls="home"
+                aria-selected="true">Foto del Curso</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#completo" role="tab"
+                aria-controls="profile" aria-selected="false">Inserte curso completo</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+
+            <div class="archivo-curso general tab-pane fade show active" id="foto" role="tabpanel"
+              aria-labelledby="home-tab">
+              <div class="curso form-floating ">
+                <div class="">
+                  <input class="form-control form-control-lg"  type="file" id="formFile" name="fotoCurso">
+                </div>
+              </div>
+            </div>
+
+            <div class="archivo-curso general tab-pane fade" id="completo" role="tabpanel"
+              aria-labelledby="profile-tab">
+              <div class="curso form-floating ">
+                <div class="">
+                  <input class="form-control form-control-lg" type="file" id="formFile" name="cursoCompleto">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CAJA DE CURSOS -->
+
+        <!-- CAJA DE DATOS -->
+        <div class="caja-datos col-12 col-md-6">
+          <!--  -->
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#precio" role="tab"
+                aria-controls="home" aria-selected="true">Precio</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <a class="nav-link " id="home-tab" data-bs-toggle="tab" href="#categoria" role="tab" aria-controls="home"
+                aria-selected="false">Categoria</a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#etiquetas" role="tab"
+                aria-controls="profile" aria-selected="false">Etiquetas</a>
+            </li>
+          </ul>
+          <!--  -->
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="precio" role="tabpanel" aria-labelledby="home-tab">
+              <div class="campo-prof form-floating  col-12 row">
+                <input type="text" class="form-control" id="modelo" placeholder="Precio ($)" name="precio">
+                <label for="modelo"></label>
+              </div>
+              <div class="campo-prof form-floating col-12 row">
+                <input type="text" class="form-control" id="modelo" placeholder="Precio Rebaja ($)" name="precioRebaja">
+                <label for="modelo"></label>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="categoria" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="campo-prof form-floating mb-3 col-12 row">
+                <input type="text" class="form-control" id="modelo" placeholder="Categoria (Ej:WordPress)"
+                  name="categoria">
+                <label for="modelo"></label>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="etiquetas" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="campo-prof form-floating mb-3 col-12 row">
+                <input type="text" class="form-control" id="modelo"
+                  placeholder="Etiqueta (Ej:Diseño Web WordPress Tienda)" name="etiquetaCurso">
+                <label for="modelo"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CAJA DE DATOS -->
+
+        <!-- DESCRIPCION -->
+        <div class="descripcion-container col-12">
+          <textarea class="caja-description" placeholder="Descripción General" name="descripcion" id="" cols="148"
+            rows="6"></textarea>
+        </div>
+        <div class="descripcion-container col-12">
+          <textarea class="caja-description" placeholder="A quién está dirigido" name="aQuienEstaDirigido" id="" cols="148"
+            rows="2"></textarea>
+        </div>
+        <div class="descripcion-container col-12">
+          <textarea class="caja-description" placeholder="Requisitos" name="requisitos" id="" cols="148"
+            rows="4"></textarea>
+        </div>
+        <div class="descripcion-container col-12">
+          <textarea class="caja-description" placeholder="Descripción corta" name="descripcionCorta" maxlength="200"
+            id="" cols="148" rows="5"></textarea>
+        </div>
+
+        <!-- Dtos del curso -->
+        <div class="profesor-contenedor col-12 row">
+          <div class="campo-prof prof-info col-12 row">
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo"  placeholder="Cantidad de capitulos" name="cantidadDeCapitulos">
+              <label for="modelo"></label>
+            </div>
+            <div class=" form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Cantidad de prácticas" name="cantidadDePracticas">
+              <label for="modelo"></label>
+            </div>
+            <div class=" form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Idioma" name="audio">
+              <label for="modelo"></label>
+            </div>
+            <div class="form-floating col-12 row select">
+              <h4>Nivel del curso</h4>
+              <select name="nivel" id="" value=>
+                <option selected value="facil">Facil</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="dificil">Dificil</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Dtos del curso -->
+
+        <h1 class="datos-prof">Datos del Profesor</h1>
+        <div class="profesor-contenedor col-12 row">
+          <div class="campo-prof prof-info col-12 row">
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Nombre" name="nombreProfesor">
+              <label for="modelo"></label>
+            </div>
+            <div class=" form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo"  placeholder="Apellido" name="apellidoProfesor">
+              <label for="modelo"></label>
+            </div>
+          </div>
+
+          <div class="campo-prof prof-info  row col-12">
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Correo" name="correoProfesor">
+              <label for="modelo"></label>
+            </div>
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Teléfono" name="telefonoProfesor">
+              <label for="modelo"></label>
+            </div>
+          </div>
+
+          <div class="campo-prof prof-info  row col-12">
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Ciudad" name="ciudadProfesor">
+              <label for="modelo"></label>
+            </div>
+            <div class=" form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Pais" name="pais">
+              <label for="modelo"></label>
+            </div>
+          </div>
+
+          <div class="campo-prof prof-info  row col-12">
+            <div class="form-floating mb-3 col-12 row">
+              <input type="text" class="form-control" id="modelo" placeholder="Título del profesor"
+                name="tituloProfesor">
+              <label for="modelo"></label>
+            </div>
+            <div class="campo-prof form-floating mb-3">
+              <div class="">
+                <input class="form-control form-control-lg" type="file" id="formFile" name="fotoProfesor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DESCRIPCION -->
+
+
+
+
+        <!-- CAJA DE CURSOS -->
+        <button class="publicar" type="submit">Publicar</button>
+      </form>
+
+
+
+    </div>
+    <!-- Columna 1 -->
+
+    <!-- FOOTER -->
+    <%- include("partials/footer.ejs") %>
+    <!-- FOOTER -->
+</body>
+
+</html>

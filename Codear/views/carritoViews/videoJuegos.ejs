@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include("../partials/head.ejs") %>
+<!-- HEAD -->
+
+<body>
+  <!-- Header -->
+  <%- include("../partials/header.ejs") %>
+  <!-- /Header -->
+
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container-fluid row">
+    <div class="principal-carrito col-12 ">
+        <i class="fas fa-angle-right col-1"></i>
+        <h1 class="col-11">VideoJuegos</h1>
+    </div>
+    <!-- SECCIONES -->
+    <%- include("secciones") %> 
+    <!-- CONTROLADOR -->
+
+    <!-- CUERPO DEL CARRITO -->
+    <div class="cuerpo-cursos-carrito col-12 col-md-9">
+      <img src="/images/bannerCarrito.jpg" alt="">
+      <!-- <div class="titulo col-12 ">
+        <h1>Todos los cursos</h1>
+      </div> -->
+      <!-- Cursos -->
+      <div class="todos-los-cursos col-12 row">
+        <h1 class="col-11">VideoJuegos</h1>
+        <% productoFiltra.forEach(product => { %>
+         <div class="curso col-12 col-sm-6 col-md-5 col-lg-5 card" style="width: 18rem;">
+         <a href="/cursos/detail/<%= product.id %> ">
+            <img src="/images/cursos/<%= product.fotoCurso %> " class="card-img-top" alt="...">
+            <div class="card-body ">
+              <div>
+                <h5 class="card-title "><%= product.nombreCurso %></h5>
+                <p class="card-profe">Un curso de <%= product.nombreProfesor %> <%= product.apellidoProfesor %></p>
+                <!-- <p class="card-text">Crea una tienda profesional, conoce la fantastica plataforma de Wordpress</p> -->
+              </div>
+              <div class="precio-curso ">
+                <div class="rebaja">
+                  <h1>REBAJA</h1>
+                  <p>65% Dto. $1.990ARS</p>
+                </div>
+                <a href="#" class="btn btn-primary col-12 card-precio"><i class="fas fa-shopping-cart"></i>$1200</a>
+              </div>
+            </div>
+         </a>
+        </div>
+        <% }) %>
+        
+        
+      </div>
+      <!-- Cursos -->
+    </div>
+    <!-- CONTENEDOR -->
+  </div>
+  <!-- CONTENEDOR PRINCIPAL -->
+
+
+
+  <!-- FOOTER -->
+  <%- include("../partials/footer.ejs") %>
+  <!-- FOOTER -->
+</body>
+
+</html>

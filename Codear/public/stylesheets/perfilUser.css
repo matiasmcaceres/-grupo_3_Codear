@@ -1,0 +1,189 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+/* Variables */
+:root {
+  --negroCODE: #020202;
+  --celesteCODE: #308999;
+  --gray: #666666;
+  --fondo: #ebebeb;
+  --naranja: #DB4C0B;
+  --whatsapp: #20B038;
+  --fuente-base: 'Ubuntu', sans-serif;
+}
+
+/* CONTROLADOR */
+.cuenta-perfil li{
+  margin: 10px 0;
+}
+
+.cuenta-perfil li a:hover{
+  color: var(--fondo);
+}
+/* CONTROLADOR */
+
+/* PERFIL */
+
+.perfil{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(209, 209, 209);
+}
+
+.bienvenido-user{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bienvenido-user img {
+  width: 100px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.bienvenido-user p{
+  font-size: 16px;
+}
+/* PERFIL */
+
+/* DATOS */
+.datos-user{
+ width: 100%;
+ display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+ align-items: flex-start;
+ padding: 20px;
+}
+
+.datos-user h2{
+  padding: 10px 40px;
+  margin: 0;
+}
+
+.datos-user>h3 {
+  padding: 10px 60px;
+  margin: 0;
+}
+
+.cajaUser>div{
+  text-align: right;
+  font-size: 14px;
+}
+
+.cajaUser{
+  margin: auto;
+  width: 90%;
+  background-color:var(--fondo);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cajaUser h3,
+.cajaUser h4,
+.cajaUser div{
+  margin: 0;
+}
+/* DATOS */
+
+/* EDICION DE DATOS */
+.cajaUser form{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cajaUser .modal-content{
+  padding: 20px;
+}
+
+.cajaUser .modal-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cajaUser .salir-edit-perfil{
+  padding: 5px;
+  border: none;
+  background: transparent;
+}
+
+.cajaUser .salir-edit-perfil i{
+    font-size: 20px;
+}
+
+.cajaUser .modal-body{
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+
+.cajaUser > p{
+text-align: right;
+padding: 10px;
+}
+
+.cajaUser .modal-body input{
+padding: 0 5px;}
+
+.cajaUser .modal-body label{
+  font-weight: 600;
+}
+
+.cajaUser .modal-footer button{
+  font-size: 15px;
+}
+
+/* PERFIL EDIT */
+.cajaUser input{
+  font-size: 14px;
+}
+
+/* PERFIL LIST */
+.usuarios-list > a{
+  margin-right: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.usuario-list,
+.usuarios-list{
+  margin: 0;
+  padding: 0;
+}
+
+.usuario-list{
+  padding: 15px 0;
+  border-bottom: 2px solid var(--negroCODE);
+}
+
+.usuario-list h2,
+.usuario-list form{
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-product{
+  border: none;
+}
+
+.usuario-list form i{
+  font-size: 30px;
+}
+
+.usuario-list form i:hover{
+  color: var(--naranja);
+}
+
+.img-usuario-list{
+  width: auto;
+  max-height: 50px;
+}
